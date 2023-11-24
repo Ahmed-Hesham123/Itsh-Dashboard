@@ -36,8 +36,8 @@ Thanks for checking out this content.
 
 ### Course Link
 
-![Tutorial Link](https://www.youtube.com/watch?v=4OGWPn-Q__I&list=PLDoPjvoNmBAyGaRGzPVZCkYx5L7Mo9Tbh)
+<a href="https://www.youtube.com/watch?v=4OGWPn-Q__I&list=PLDoPjvoNmBAyGaRGzPVZCkYx5L7Mo9Tbh">Tutorial Link</a>
 
 ### Demo
 
-![Demo Link](https://itsh-dashboard.netlify.app/)
+<a href="https://itsh-dashboard.netlify.app/">Demo Link</a>
