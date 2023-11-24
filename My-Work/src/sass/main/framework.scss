@@ -1,0 +1,300 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Global Rules
+@use "../layout/global-rules";
+
+/*============
+  Start Box
+============*/
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+.d-grid {
+  display: grid;
+}
+.gap-20 {
+  gap: 20px;
+}
+.d-block {
+  display: block;
+}
+@media (max-width: 767px) {
+  .block-mobile {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/*============
+  End Box
+============*/
+
+/*======================
+  Start Padding + Margin
+=========================*/
+
+@for $i from 1 through 10 {
+  .p-#{10 * $i} {
+    padding: #{10 * $i}px;
+  }
+}
+@for $i from 1 through 9 {
+  .p-#{10 + $i} {
+    padding: #{10 + $i}px;
+  }
+}
+
+@for $i from 1 through 10 {
+  .m-#{10 * $i} {
+    margin: #{10 * $i}px;
+  }
+}
+
+@for $i from 0 through 30 {
+  .pt-#{$i} {
+    padding: {
+      top: #{$i}px;
+    }
+  }
+  .pr-#{$i} {
+    padding: {
+      right: #{$i}px;
+    }
+  }
+  .pb-#{$i} {
+    padding: {
+      bottom: #{$i}px;
+    }
+  }
+  .pl-#{$i} {
+    padding: {
+      left: #{$i}px;
+    }
+  }
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin: {
+      top: #{$i}px;
+    }
+  }
+  .mr-#{$i} {
+    margin: {
+      right: #{$i}px;
+    }
+  }
+  .mb-#{$i} {
+    margin: {
+      bottom: #{$i}px;
+    }
+  }
+  .ml-#{$i} {
+    margin: {
+      left: #{$i}px;
+    }
+  }
+}
+
+/*======================
+  End Padding + Margin
+=========================*/
+/*=============
+  Start Color
+==============*/
+.bg-white {
+  background: {
+    color: #fff;
+  }
+}
+.bg-red {
+  background: {
+    color: var(--red-color);
+  }
+}
+.bg-blue {
+  background: {
+    color: var(--blue-color);
+  }
+}
+.bg-orange {
+  background: {
+    color: var(--orange-color);
+  }
+}
+.bg-green {
+  background: {
+    color: var(--green-color);
+  }
+}
+.bg-eee {
+  background: {
+    color: #eee;
+  }
+}
+.c-blue {
+  color: var(--blue-color);
+}
+.c-orange {
+  color: var(--orange-color);
+}
+.c-green {
+  color: var(--green-color);
+}
+.c-white {
+  color: #fff;
+}
+.c-black {
+  color: #000;
+}
+.c-grey {
+  color: var(--grey-color);
+}
+.c-red {
+  color: red;
+}
+/*=============
+  End Color
+==============*/
+/*=================
+  Start Position
+===================*/
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+/*=================
+  End Position
+===================*/
+/*===========
+  Start Font 
+=============*/
+.txt-c {
+  text-align: center;
+}
+.fw-bold {
+  font-weight: bold;
+}
+.fs-13 {
+  font: {
+    size: 13px;
+  }
+}
+.fs-14 {
+  font: {
+    size: 14px;
+  }
+}
+.fs-15 {
+  font: {
+    size: 15px;
+  }
+}
+.fs-20 {
+  font: {
+    size: 20px;
+  }
+}
+.fs-25 {
+  font: {
+    size: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .txt-c-mobile {
+    text: {
+      align: center;
+    }
+  }
+}
+/*===========
+  End Font 
+=============*/
+/*==============
+  Start Border
+===============*/
+
+@for $i from 1 through 10 {
+  .rad-#{2 + $i} {
+    border: {
+      radius: #{2 + $i}px;
+    }
+  }
+}
+
+.rad-half {
+  border-radius: 50%;
+}
+
+.b-none {
+  border: none;
+}
+
+.border-ccc {
+  border: 1px solid #ccc;
+}
+
+.border-eee {
+  border: 1px solid #eee;
+}
+
+/*==============
+  End Border
+===============*/
+
+/*================
+  Start Component
+==================*/
+.center-flex {
+  @include centering;
+}
+.between-flex {
+  @include between-flex;
+}
+
+.btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+/*================
+  End Component
+==================*/
+
+/*================
+  Start Width + Height
+==================*/
+.w-100 {
+  width: 100px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.h-100 {
+  height: 100px;
+}
+
+.h-full {
+  height: 100%;
+}
+/*================
+  End Width + Height
+==================*/

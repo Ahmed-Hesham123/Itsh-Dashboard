@@ -1,0 +1,53 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=======================
+    Start Query Profile (max-width: 767px and min-width: 767px)
+=========================*/
+
+// max-width: 767px
+@include breakpoints(mobile) {
+  .profile-page {
+    .overview {
+      flex-direction: column;
+    }
+    .info-box {
+      .toggle-switch {
+        margin: auto;
+      }
+    }
+
+    .other-data {
+      flex-direction: column;
+    }
+    .activity {
+      flex-direction: column;
+      img {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      .date {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+// min-width: 767px
+@include breakpoints(small) {
+  .profile-page {
+    .avatar-box {
+      border-right: 1px solid #eee;
+    }
+    .activity {
+      .date {
+        margin-left: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/*=======================
+    End Query Profile
+=========================*/

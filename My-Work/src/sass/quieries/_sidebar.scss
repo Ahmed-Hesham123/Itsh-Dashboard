@@ -1,0 +1,57 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=====================================================
+    Sidebar (max-width: 767px and min-width: 767px)
+====================================================*/
+.sidebar {
+  @include breakpoints(mobile) {
+    width: 58px;
+    padding: 10px;
+
+    & > h3 {
+      font: {
+        size: 13px;
+      }
+      margin: {
+        bottom: 15px;
+      }
+    }
+
+    .main-nav-list {
+      .main-nav-link:link,
+      .main-nav-link:visited {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include breakpoints(small) {
+    & > h3 {
+      margin-bottom: 50px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+      }
+
+      &::before {
+        width: 80px;
+        height: 2px;
+        bottom: -20px;
+      }
+
+      &::after {
+        bottom: -29px;
+        border: 4px solid #fff;
+        @include circle(12px);
+      }
+    }
+  }
+}

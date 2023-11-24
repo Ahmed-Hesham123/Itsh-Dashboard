@@ -1,0 +1,23 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=======================
+    Start Query Settings (max-width: 767px and min-width: 767px)
+=========================*/
+
+@include breakpoints(mobile) {
+  .settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    .backup-control {
+      .servers {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+/*=======================
+    End Query Settings
+=========================*/

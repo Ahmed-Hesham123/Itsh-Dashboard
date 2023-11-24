@@ -1,0 +1,70 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=======================
+    Start Welcome Widget (max-width: 767px and min-width: 767px)
+=========================*/
+
+.welcome {
+  @include breakpoints(mobile) {
+    .intro {
+      padding: {
+        bottom: 30px;
+      }
+    }
+
+    .avatar {
+      margin: {
+        left: 0;
+      }
+    }
+
+    .body {
+      & > div:not(:last-child) {
+        margin: {
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*=======================
+    End Welcome Widget 
+=========================*/
+
+/*=================
+    Start Tickets
+===================*/
+
+.tickets {
+  @include breakpoints(mobile) {
+    .box {
+      width: 100%;
+    }
+  }
+}
+
+/*=================
+    End Tickets
+===================*/
+
+/*====================
+    Start Latest News
+======================*/
+
+.latest-news {
+  @include breakpoints(mobile) {
+    .news-row {
+      display: block;
+
+      .label {
+        margin: 10px auto;
+        width: fit-content;
+      }
+    }
+  }
+}
+/*====================
+    End Latest News
+======================*/

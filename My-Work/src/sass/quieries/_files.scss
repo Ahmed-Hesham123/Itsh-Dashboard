@@ -1,0 +1,18 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=======================
+    Start Query Files (max-width: 767px and min-width: 767px)
+=========================*/
+
+// max-width: 767px
+@include breakpoints(mobile) {
+  .files-page {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+
+/*=======================
+    End Query Files
+=========================*/

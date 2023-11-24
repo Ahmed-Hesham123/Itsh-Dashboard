@@ -1,0 +1,62 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+/*===============
+    Start Header
+=================*/
+
+.head {
+  .search {
+    &::before {
+      content: "\f002";
+      font: {
+        family: var(--fa-style-family-classic);
+        weight: 900;
+        size: 14px;
+      }
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input {
+      margin: {
+        left: 5px;
+      }
+      padding: {
+        left: 30px;
+      }
+      border: var(--main-border);
+      width: 160px;
+      transition: width 0.3s;
+
+      &:focus {
+        width: 200px;
+
+        &::placeholder {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .icons {
+    .notification::before {
+      content: "";
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      background-color: var(--red-color);
+      @include circle(10px);
+    }
+    img {
+        width: 32px;
+        height: 32px;
+        margin-left: 15px;
+    }
+  }
+}
+
+/*===============
+    Start Header
+=================*/

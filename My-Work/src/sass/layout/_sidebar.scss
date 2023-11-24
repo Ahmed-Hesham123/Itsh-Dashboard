@@ -1,0 +1,39 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*==================
+    Start Sidebar 
+==================*/
+.sidebar {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+  transition: 0.3s ease-in-out;
+
+  .main-nav-list {
+    list-style: none;
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+      margin-bottom: 5px;
+
+      &:hover,
+      &:active,
+      &.active {
+        background-color: #f6f6f6;
+      }
+
+      span {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+/*==================
+    End Sidebar 
+==================*/

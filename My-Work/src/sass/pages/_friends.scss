@@ -1,0 +1,56 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Friends Page
+====================*/
+
+.friends-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .friend {
+    .contact {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      i {
+        background: #eee;
+        padding: 10px;
+        border-radius: 50%;
+        color: #666;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background: var(--blue-color);
+          color: #fff;
+        }
+      }
+    }
+    .icons {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+
+      i {
+        margin-right: 5px;
+      }
+
+      .vip {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 40px;
+        opacity: 0.2;
+      }
+    }
+  }
+}
+/*=====================
+    End Friends Page
+====================*/

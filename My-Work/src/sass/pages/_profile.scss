@@ -1,0 +1,104 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Profile
+====================*/
+
+.profile-page {
+  .avatar-box {
+    width: 300px;
+    & > img {
+      width: 120px;
+      height: 120px;
+    }
+    .level {
+      height: 6px;
+      overflow: hidden;
+      margin: auto;
+      width: 70%;
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: var(--blue-color);
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .info-box {
+    .box {
+      flex-wrap: wrap;
+      transition: 0.3s ease;
+      border-bottom: 1px solid #eee;
+
+      &:hover {
+        background: #f9f9f9;
+      }
+
+      & > div {
+        min-width: 250px;
+        padding: 10px 0 0;
+      }
+
+      h4 {
+        font-weight: normal;
+      }
+    }
+    .toggle-checkbox {
+      &:checked + .toggle-switch::before {
+        left: 62px;
+      }
+    }
+    .toggle-switch {
+      height: 20px;
+      &::before {
+        width: 12px;
+        height: 12px;
+        font-size: 8px;
+      }
+    }
+  }
+
+  .skills-card {
+    flex: 1;
+    ul {
+      li {
+        padding: 15px 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid #eee;
+        }
+        span {
+          display: inline-flex;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .activities {
+    flex: 2;
+    .activity {
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+      img {
+        width: 64px;
+        height: 64px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/*=====================
+    End Profile
+====================*/

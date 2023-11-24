@@ -1,0 +1,34 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+
+/*=======================
+    Start Query Projects (max-width: 767px and min-width: 767px)
+=========================*/
+
+// max-width: 767px
+@include breakpoints(mobile) {
+  .projects-page {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+    .do {
+      flex-direction: column;
+      span {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .info {
+      flex-direction: column;
+      .prog {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+/*=======================
+    End Query Projects
+=========================*/

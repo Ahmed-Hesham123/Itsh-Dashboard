@@ -1,0 +1,78 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Files Page
+====================*/
+
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+
+  .plan {
+    .top {
+      border: 3px solid white;
+      outline: 3px solid transparent;
+    }
+
+    &.green {
+      .top {
+        outline-color: var(--green-color);
+      }
+    }
+    &.blue {
+      .top {
+        outline-color: var(--blue-color);
+      }
+    }
+    &.orange {
+      .top {
+        outline-color: var(--orange-color);
+      }
+    }
+
+    .price {
+      position: relative;
+      width: fit-content;
+      margin: auto;
+      font: {
+        size: 40px;
+      }
+      span {
+        position: absolute;
+        left: -20px;
+        font-size: 25px;
+        top: 0;
+      }
+    }
+
+    ul {
+      li {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        border-bottom: 1px solid #eee;
+        .yes {
+          color: var(--green-color);
+        }
+
+        i:not(.yes, .help) {
+          color: var(--red-color);
+        }
+
+        i:first-child {
+          font-size: 18px;
+          margin-right: 5px;
+        }
+
+        .help {
+          color: var(--grey-color);
+          margin-left: auto;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

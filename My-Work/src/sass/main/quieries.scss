@@ -1,0 +1,60 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Functions
+@use "../helpers/functions" as *;
+
+// Import Sidebar Query
+@use "../quieries/sidebar";
+// Import Wrapper Query
+@use "../quieries/wrapper";
+// Import Dashboard Query
+@use "../quieries/dashboard";
+// Import Settings Query
+@use "../quieries/settings";
+// Import Profile Query
+@use "../quieries/profile";
+// Import Projects Query
+@use "../quieries/projects";
+// Import Courses Query
+@use "../quieries/courses";
+// Import Friends Query
+@use "../quieries/friends";
+// Import Files Query
+@use "../quieries/files";
+// Import plans Query
+@use "../quieries/plans";
+
+/*
+$max_mobile: 767px;
+
+@media (max-width: $max_mobile) {
+  .sidebar {
+    padding: 20px;
+  }
+}
+*/
+
+// If condition + Mixin + Content
+
+.media {
+  @include breakpoints(mobile) {
+    font: {
+      size: 15px;
+    }
+  }
+  @include breakpoints(small) {
+    font: {
+      size: 18px;
+    }
+  }
+  @include breakpoints(medium) {
+    font: {
+      size: 20px;
+    }
+  }
+  @include breakpoints(large) {
+    font: {
+      size: 22px;
+    }
+  }
+}

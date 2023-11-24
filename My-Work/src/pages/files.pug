@@ -1,0 +1,310 @@
+- var active = "files.html"
+doctype html
+html(lang="en")
+    head
+        include ../components/head
+        title Files
+    body
+        .page.d-flex
+            include ../components/aside
+            .content.w-full
+                include ../components/header
+                h1.p-relative Files
+                main
+                    .files-page.d-flex.m-20.gap-20
+                        <!-- Start File Statistics Box -->
+                        .files-stats.bg-white.p-20.rad-10
+                            h2.mt-0.mb-15.txt-c-mobile Files Statistics
+                            .d-flex.align-center.border-eee.p-10.rad-6.mb-15.fs-13
+                                i.fa-regular.fa-file-pdf.fa-lg.blue.center-flex.c-blue.icon
+                                .info 
+                                    span PDF Files 
+                                    span.c-grey.d-block.mt-5 130 Files
+                                .size.c-grey 6.5GB
+                            .d-flex.align-center.border-eee.p-10.rad-6.mb-15.fs-13
+                                i.fa-regular.fa-images.fa-lg.green.center-flex.c-green.icon
+                                .info 
+                                    span Images
+                                    span.c-grey.d-block.mt-5 115 Files
+                                .size.c-grey 3.5GB
+                            .d-flex.align-center.border-eee.p-10.rad-6.mb-15.fs-13
+                                i.fa-regular.fa-file-word.fa-lg.red.center-flex.c-red.icon
+                                .info 
+                                    span Word Files
+                                    span.c-grey.d-block.mt-5 110 Files
+                                .size.c-grey 3.2GB
+                            .d-flex.align-center.border-eee.p-10.rad-6.mb-15.fs-13
+                                i.fa-solid.fa-file-csv.fa-lg.orange.center-flex.c-orange.icon
+                                .info 
+                                    span CSV Files 
+                                    span.c-grey.d-block.mt-5 99 Files
+                                .size.c-grey 2.9GB
+                            a(href="#").upload.bg-blue.c-white.txt-c.fs-13.rad-6.d-block.btn-shape.w-fit
+                                i.fa-solid.fa-angles-up.mr-10 
+                                | Upload
+                        <!-- End File Statistics Box -->
+                        .files-content.d-grid.gap-20
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/pdf.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/avi.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/eps.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/psd.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/dll.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/png.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/pdf.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/avi.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/eps.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/psd.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/dll.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/png.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/pdf.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/avi.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/eps.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/psd.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/dll.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/png.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/pdf.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/avi.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/eps.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/psd.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/dll.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->
+                            <!-- Start File Box -->
+                            .file.bg-white.p-10.rad-10
+                                i.fa-solid.fa-download.c-grey.p-absolute
+                                .icon.txt-c
+                                    img.mt-15.mb-15(src="imgs/png.svg" alt="PDF Image")
+                                .txt-c.mb-10.fs-14 my-file.pdf
+                                p.c-grey.fs-13 Itsh
+                                .info.between-flex.mt-10.pt-10.fs-13.c-grey
+                                    span 20/06/2020
+                                    span 5.5MB
+                            <!-- End File Box -->

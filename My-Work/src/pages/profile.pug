@@ -1,0 +1,160 @@
+- var active = "profile.html"
+doctype html
+html(lang="en")
+    head
+        include ../components/head
+        title Profile
+    body
+        .page.d-flex
+            include ../components/aside
+            .content.w-full
+                include ../components/header
+                h1.p-relative Profile
+                main
+                    .profile-page.m-20
+                        <!-- Start Overview -->
+                        section.overview.bg-white.p-20.rad-10.d-flex.align-center
+                            article.avatar-box.txt-c.p-20
+                                img.rad-half.mb-10(src="imgs/avatar.png" class="avatar" alt="A man picture")
+                                h3.m-0 Ahmed Hesham
+                                p.c-grey.mt-10 Level 20
+                                .level.rad-6.bg-eee.p-relative
+                                    span(style="width: 70%")
+                                .rating.mt-10.mb-10 
+                                    i.fa-solid.fa-star.c-orange.fs-13
+                                    i.fa-solid.fa-star.c-orange.fs-13
+                                    i.fa-solid.fa-star.c-orange.fs-13
+                                    i.fa-solid.fa-star.c-orange.fs-13
+                                    i.fa-solid.fa-star.c-orange.fs-13
+                                p.c-grey.m-0.fs-13 550 Rating
+                            article.info-box.w-full.txt-c-mobile
+                                <!-- Start Information Row -->
+                                .box.p-20.d-flex.align-center
+                                    h4.c-grey.fs-15.m-0.w-full General Information
+                                    .fs-14
+                                        span.c-grey.mr-5 Full Name: 
+                                        span Ahmed Hesham
+                                    .fs-14
+                                        span.c-grey.mr-5 Gender: 
+                                        span Male
+                                    .fs-14
+                                        span.c-grey.mr-5 Country:
+                                        span Egypt
+                                    .fs-14
+                                        include ../components/checkInput
+                                <!-- End Information Row -->
+                                <!-- Start Information Row -->
+                                .box.p-20.d-flex.align-center
+                                    h4.c-grey.fs-15.m-0.w-full Personal Information
+                                    .fs-14
+                                        span.c-grey.mr-5 Email: 
+                                        span test@test.dev
+                                    .fs-14
+                                        span.c-grey.mr-5 Phone: 
+                                        span 0123456789
+                                    .fs-14
+                                        span.c-grey.mr-5 Date Of Birth: 
+                                        span 25 / 12 / 2003
+                                    .fs-14
+                                        include ../components/checkInput
+                                <!-- End Information Row -->
+                                <!-- Start Information Row -->
+                                .box.p-20.d-flex.align-center
+                                    h4.c-grey.fs-15.m-0.w-full Job Information
+                                    .fs-14
+                                        span.c-grey.mr-5 Title:
+                                        span Full Stack Developer
+                                    .fs-14
+                                        span.c-grey.mr-5 Programming Language:
+                                        span JavaScript
+                                    .fs-14
+                                        span.c-grey.mr-5 Years Of Experience: 
+                                        span +3
+                                    .fs-14
+                                        include ../components/checkInput
+                                <!-- End Information Row -->
+                                <!-- Start Information Row -->
+                                .box.p-20.d-flex.align-center
+                                    h4.c-grey.fs-15.m-0.w-full Billing Information
+                                    .fs-14
+                                        span.c-grey.mr-5 Payment Method:
+                                        span Paypal
+                                    .fs-14
+                                        span.c-grey.mr-5 Email:
+                                        span email@website.com
+                                    .fs-14
+                                        span.c-grey.mr-5 Subscription:
+                                        span Monthly
+                                    .fs-14
+                                        include ../components/checkInput
+                                <!-- End Information Row -->
+                        <!-- End Overview -->
+                        <!-- Start Other Data -->
+                        section.other-data.d-flex.gap-20
+                            <!-- Start Skills -->
+                            article.skills-card.bg-white.p-20.mt-20.rad-10
+                                h2.mt-0.mb-10 My Skills
+                                p.mt-0.mb-20.c-grey.fs-15 Complete Skills List
+                                ul.m-0
+                                    li
+                                        span.btn-shape.bg-eee HTML
+                                        span.btn-shape.bg-eee Pugjs
+                                        span.btn-shape.bg-eee HAML
+                                    li
+                                        span.btn-shape.bg-eee CSS
+                                        span.btn-shape.bg-eee SASS
+                                        span.btn-shape.bg-eee Stylus
+                                    li
+                                        span.btn-shape.bg-eee JavaScript
+                                        span.btn-shape.bg-eee TypeScript
+                                    li
+                                        span.btn-shape.bg-eee Reactjs
+                                        span.btn-shape.bg-eee Vuejs
+                                    li
+                                        span.btn-shape.bg-eee Jest
+                                        span.btn-shape.bg-eee Jasmine
+                                    li
+                                        span.btn-shape.bg-eee Nodejs
+                                        span.btn-shape.bg-eee Express
+                                    li
+                                        span.btn-shape.bg-eee Python
+                                        span.btn-shape.bg-eee Django
+                            <!-- End Skills -->
+                            <!-- Start Activities -->
+                            article.activities.bg-white.p-20.mt-20.rad-10
+                                h2.mt-0.mb-10 Latest Activities
+                                p.mt-0.mb-20.c-grey.fs-15 Latest Activities Done By The User
+                                .activity.d-flex.align-center.txt-c-mobile
+                                    img(src="imgs/activity-01.png" alt="Store")
+                                    .info
+                                        span.d-block.mb-10 Store
+                                        span.c-grey Bought The Mastering Python Course
+                                    .date
+                                        span.d-block.mb-10 18:10
+                                        span.c-grey Yesterday
+                                .activity.d-flex.align-center.txt-c-mobile
+                                    img(src="imgs/activity-02.png" alt="Store")
+                                    .info
+                                        span.d-block.mb-10 Academy
+                                        span.c-grey Got The PHP Certificate
+                                    .date
+                                        span.d-block.mb-10 16:05
+                                        span.c-grey Yesterday
+                                .activity.d-flex.align-center.txt-c-mobile
+                                    img(src="imgs/activity-03.png" alt="Store")
+                                    .info
+                                        span.d-block.mb-10 Badges
+                                        span.c-grey Unlocked The 10 Skills Badge
+                                    .date
+                                        span.d-block.mb-10 18:05
+                                        span.c-grey Yesterday
+                                .activity.d-flex.align-center.txt-c-mobile
+                                    img(src="imgs/activity-01.png" alt="Store")
+                                    .info
+                                        span.d-block.mb-10 Store
+                                        span.c-grey Bought The Typescript Course
+                                    .date
+                                        span.d-block.mb-10 12:05
+                                        span.c-grey Yesterday
+                            <!-- End Activities -->
+                        <!-- End Other Data -->

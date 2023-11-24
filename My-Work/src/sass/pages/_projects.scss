@@ -1,0 +1,75 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Projects
+====================*/
+
+.projects-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  .project {
+    .date {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    h4 {
+      font-weight: normal;
+    }
+    .team {
+      position: relative;
+      min-height: 80px;
+      a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}) {
+            left: #{(($i * 25px) - 25px)};
+          }
+        }
+        &:hover {
+          z-index: 999;
+        }
+        img {
+          @include circle(40px);
+          border: 2px solid white;
+        }
+      }
+    }
+    .do {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      justify-content: flex-end;
+
+      span {
+        width: fit-content;
+      }
+    }
+    .info {
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+      margin-top: 15px;
+      .prog {
+        position: relative;
+        width: 260px;
+        height: 8px;
+        border-radius: 6px;
+        overflow: hidden;
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }
+      }
+      margin-top: 20px;
+    }
+  }
+}
+/*=====================
+    End Projects
+====================*/

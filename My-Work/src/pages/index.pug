@@ -1,0 +1,385 @@
+- var active = "index.html"
+doctype html
+html(lang="en")
+    head
+        include ../components/head
+        title Dashboard
+    body
+        .page.d-flex
+            include ../components/aside
+            .content.w-full
+                include ../components/header
+                h1.p-relative Dashboard
+                main
+                <!-- Start Wrapper -->
+                    .wrapper.d-grid.gap-20
+                        <!-- Start Welcome Widget -->
+                        article.welcome.bg-white.rad-10.txt-c-mobile.block-mobile
+                            .intro.p-20.d-flex.space-between.bg-eee
+                                div 
+                                    h2.m-0 Welcome 
+                                    p.c-grey.mt-5 Itsh
+                                img(src="imgs/welcome.png" class="hide-mobile" alt="Welcome Image")
+                            img(src="imgs/avatar.png" class="avatar" alt="A man picture")
+                            .body.txt-c.d-flex.p-20.mt-20.mb-20.block-mobile
+                                div Ahmed Hesham 
+                                    span.d-block.c-grey.fs-14.mt-10 Developer
+                                div 52 
+                                    span.d-block.c-grey.fs-14.mt-10 Projects
+                                div $8500 
+                                    span.d-block.c-grey.fs-14.mt-10 Earned
+                            a(href="profile.html" class="visit d-block fs-14  bg-blue c-white w-fit btn-shape") Profile
+                        <!-- End Welcome Widget -->
+                        <!-- Start Quick Draft Widget -->
+                        article.quick-draft.p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Quick Draft 
+                            p.mt-0.mb-20.c-grey.fs-15 Write A Draft For Your Ideas
+                            form 
+                                input(class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" type="text" placeholder="Title")
+                                textarea(class="d-block mb-20 w-full p-10 b-none bg-eee rad-6" placeholder="Your Thought")
+                                input(class="save d-block fs-14 bg-blue c-white b-none w-fit btn-shape" type="submit" value="Save")
+                        <!-- End Quick Draft Widget -->
+                        <!-- Start Targets -->
+                        article.targets.p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Yearly Targets
+                            p.mt-0.mb-20.c-grey.fs-15 Targets Of The Year
+                            .target-row.mb-20.center-flex.blue
+                                .icon.center-flex
+                                    i.fa-solid.fa-dollar-sign.fa-lg.c-blue
+                                .details
+                                    span.fs-14.c-grey Money 
+                                    span.d-block.mt-5.mb-10.fw-bold $20.000
+                                    .progress.p-relative
+                                        span(class="bg-blue blue" style="width: 80%;" data-width="80%")
+                                            span.bg-blue 80%
+                            .target-row.mb-20.center-flex.orange
+                                .icon.center-flex
+                                    i.fa-solid.fa-code.fa-lg.c-orange
+                                .details
+                                    span.fs-14.c-grey Projects
+                                    span.d-block.mt-5.mb-10.fw-bold 24
+                                    .progress.p-relative
+                                        span(class="bg-orange orange" style="width: 40%;" data-width="40%")
+                                            span.bg-orange 55%
+                            .target-row.mb-20.center-flex.green
+                                .icon.center-flex
+                                    i.fa-solid.fa-user.fa-lg.c-green
+                                .details
+                                    span.fs-14.c-grey Money 
+                                    span.d-block.mt-5.mb-10.fw-bold 12
+                                    .progress.p-relative
+                                        span(class="bg-green green" style="width: 75%;" data-width="40%")
+                                            span.bg-green 40%
+                        <!-- End Targets -->
+                        <!-- Start Tickets Widget -->
+                        article.tickets.p-20.rad-10.bg-white
+                            h2.mt-0.mb-10 Tickets Statistics
+                            p.mt-0.mb-20.c-grey.fs-15 Everything About Support Tickets
+                            ul.d-flex.txt-c.gap-20.f-wrap
+                                li.box.p-20.rad-10.fs-13.c-grey
+                                    i.fa-regular.fa-rectangle-list.fa-2x.mb-10.c-orange
+                                    span.d-block.c-black.fw-bold.fs-25.mb-5 2500
+                                    | Total
+                                li.box.p-20.rad-10.fs-13.c-grey
+                                    i.fa-solid.fa-spinner.fa-2x.mb-10.c-blue
+                                    span.d-block.c-black.fw-bold.fs-25.mb-5 500
+                                    | Pending
+                                li.box.p-20.rad-10.fs-13.c-grey
+                                    i.fa-regular.fa-circle-check.fa-2x.mb-10.c-green
+                                    span.d-block.c-black.fw-bold.fs-25.mb-5 1900
+                                    | Closed
+                                li.box.p-20.rad-10.fs-13.c-grey
+                                    i.fa-regular.fa-rectangle-xmark.fa-2x.mb-10.c-red
+                                    span.d-block.c-black.fw-bold.fs-25.mb-5 100
+                                    | Deleted
+                        <!-- End Tickets Widget -->
+                        <!-- Start Latest News -->
+                        article.latest-news.p-20.rad-10.bg-white.txt-c-mobile
+                            h2.mt-0.mb-20 Latest News
+                            .news-row.d-flex.align-center
+                                img(src="imgs/news-01.png" alt="News Image 01")
+                                .info
+                                    h3 Created SASS Section
+                                    p.m-0.fs-14.c-grey New SASS Examples & Turorials
+                                span.btn-shape.bg-eee.fs-13.label 3 Days Ago
+                            .news-row.d-flex.align-center
+                                img(src="imgs/news-02.png" alt="News Image 02")
+                                .info
+                                    h3 Changed The Design
+                                    p.m-0.fs-14.c-grey A Brand New Website Design
+                                span.btn-shape.bg-eee.fs-13.label 5 Days Ago
+                            .news-row.d-flex.align-center
+                                img(src="imgs/news-03.png" alt="News Image 03")
+                                .info
+                                    h3 Team Increased
+                                    p.m-0.fs-14.c-grey 3 Developers Joined The Team
+                                span.btn-shape.bg-eee.fs-13.label 7 Days Ago
+                            .news-row.d-flex.align-center
+                                img(src="imgs/news-04.png" alt="News Image 04")
+                                .info
+                                    h3 Added Payment Gateway
+                                    p.m-0.fs-14.c-grey Many New Payment Gateways Added
+                                span.btn-shape.bg-eee.fs-13.label 9 Days Ago
+                        <!-- End Latest News -->
+                        <!-- Start Tasks -->
+                        article.tasks.p-20.rad-10.bg-white
+                            h2.mt-0.mb-20 Latest Tasks
+                            .task-row.between-flex
+                                .info
+                                    h3.mt-0.mb-5.fs-15 Record One New Video
+                                    p.m-0.c-grey Record Python Create Exe Project
+                                span 
+                                    i.fa-regular.fa-trash-can.delete
+                            .task-row.between-flex
+                                .info
+                                    h3.mt-0.mb-5.fs-15 Write Article
+                                    p.m-0.c-grey Write Low Level vs High Level Languages
+                                span 
+                                    i.fa-regular.fa-trash-can.delete
+                            .task-row.between-flex
+                                .info
+                                    h3.mt-0.mb-5.fs-15 Finish Project
+                                    p.m-0.c-grey Publish Academy Programming Project
+                                span 
+                                    i.fa-regular.fa-trash-can.delete
+                            .task-row.between-flex.done
+                                .info
+                                    h3.mt-0.mb-5.fs-15 Attend The Meeting
+                                    p.m-0.c-grey Attend The Project Business Analysis Meeting
+                                span 
+                                    i.fa-regular.fa-trash-can.delete
+                            .task-row.between-flex
+                                .info
+                                    h3.mt-0.mb-5.fs-15 Finish Lesson
+                                    p.m-0.c-grey Finish Teaching Flex Box
+                                span 
+                                    i.fa-regular.fa-trash-can.delete
+                        <!-- End Tasks -->
+                        <!-- Start Top Search Word Widget -->
+                        article.search-items.p-20.bg-white.rad-10
+                            h2.mt-0.mb-20 Top Search Items
+                            .items-head.between-flex
+                                .fs-15.c-grey.mt-0 Keyword
+                                .fs-15.c-grey Search Count
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 Programming
+                                span.btn-shape.bg-eee.fs-13 220
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 JavaScript
+                                span.btn-shape.bg-eee.fs-13 180
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 PHP
+                                span.btn-shape.bg-eee.fs-13 160
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 Code
+                                span.btn-shape.bg-eee.fs-13 145
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 Design
+                                span.btn-shape.bg-eee.fs-13 110
+                            .items.between-flex.pt-15.pb-15
+                                span.fs-15 Logic
+                                span.btn-shape.bg-eee.fs-13 95
+                        <!-- End Top Search Word Widget -->
+                        <!-- Start Latest Uploads -->
+                        article.latest-uploads.p-20.bg-white.rad-10 
+                            h2.mt-0.mb-20 Latest Uploads
+                            ul.m-0  
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/pdf.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block my-file.pdf 
+                                            span.fs-15.c-grey Itsh
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/avi.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block My-Video-File.avi 
+                                            span.fs-15.c-grey Admin
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/psd.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block My-Psd-File.pdf
+                                            span.fs-15.c-grey Ahmed
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/zip.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block My-Zip-File.pdf
+                                            span.fs-15.c-grey User
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/dll.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block My-DLL-File.pdf
+                                            span.fs-15.c-grey Admin
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                                li.between-flex.pb-10.mb-10
+                                    .d-flex.align-center  
+                                        img(class="mr-10" src="imgs/eps.svg" alt="PDF Image")
+                                        .info
+                                            span.d-block My-Eps-File.pdf 
+                                            span.fs-15.c-grey Designer
+                                    span.btn-shape.bg-eee.fs-13 2.9mb
+                        <!-- End Latest Uploads -->
+                        <!-- Start Last Project Progress Widget -->
+                        article.last-project.p-20.bg-white.rad-10.p-relative
+                            h2.mt-0.mb-20 Last Project Progress
+                            ul.m-0.p-relative
+                                li.mt-25.d-flex.align-center.done Got The Project
+                                li.mt-25.d-flex.align-center.done Started The Project
+                                li.mt-25.d-flex.align-center.done The Project About To Finish
+                                li.mt-25.d-flex.align-center.current Test The Project
+                                li.mt-25.d-flex.align-center Finish The Project & Get Money
+                            img(src="imgs/project.png" alt="Image" class="launch-icon hide-mobile")
+                        <!-- End Last Project Progress Widget -->
+                        <!-- Start Reminders Widget -->
+                        article.reminders.p-20.bg-white.rad-10.p-relative
+                            h2.mt-0.mb-25 Reminders
+                            ul.m-0
+                                li.d-flex.align-center.mt-15
+                                    span.key.bg-blue.mr-15.d-block
+                                    div.pl-15.blue
+                                        p.fs-14.fw-bold.mt-0.mb-5 Check My Tasks List
+                                        span.fs-13.c-grey 25/12/2025 - 12:00am
+                                li.d-flex.align-center.mt-15
+                                    span.key.bg-green.mr-15.d-block
+                                    div.pl-15.green
+                                        p.fs-14.fw-bold.mt-0.mb-5 Check My Projects
+                                        span.fs-13.c-grey 25/12/2025 - 12:00am
+                                li.d-flex.align-center.mt-15
+                                    span.key.bg-orange.mr-15.d-block
+                                    div.pl-15.orange
+                                        p.fs-14.fw-bold.mt-0.mb-5 Call All My Clients
+                                        span.fs-13.c-grey 25/12/2025 - 12:00am
+                                li.d-flex.align-center.mt-15
+                                    span.key.bg-red.mr-15.d-block
+                                    div.pl-15.red
+                                        p.fs-14.fw-bold.mt-0.mb-5 Finish The Development Workshop
+                                        span.fs-13.c-grey 25/12/2025 - 12:00am
+                        <!-- End Reminders Widget -->
+                        <!-- Start Latest Post Widget -->
+                        article.latest-post.p-20.bg-white.p-relative
+                            h2.mt-0.mb-25 Latest Post
+                            .top.d-flex.align-center
+                                img(src="imgs/avatar.png" class="avatar mr-15" alt="A man picture")
+                                .info
+                                    h3.m-0.mb-5.fw-bold Ahmed Hesham 
+                                    span.c-gery About 3 Hours Ago
+                            p.post-content.txt-c-mobile.pt-20.pb-20.mt-20.mb-20 You Can Fool All Of The People Some Of The Time, And Some Of The People All Of The Time, But You Can't Fool All Of The People All Of The Time.
+                            .post-stats.between-flex.c-grey
+                                div
+                                    i.fa-regular.fa-heart.mr-5
+                                    span 1.8k
+                                div
+                                    i.fa-regular.fa-comments.mr-5
+                                    span 500
+                        <!-- End Latest Post Widget -->
+                        <!-- Start Social Media Stats Widget -->
+                        article.social-media.p-20.bg-white 
+                            h2.mt-0.mb-25 Social Media Stats
+                            ul.m-0 
+                                li.box.twitter.p-15.p-relative.mb-10.between-flex
+                                    i.fa-brands.fa-twitter.fa-2x.c-white.h-full.center-flex
+                                    span 90K Followers
+                                    a(href="#" class="fs-13 c-white btn-shape") Follow 
+                                li.box.facebook.p-15.p-relative.mb-10.between-flex
+                                    i.fa-brands.fa-facebook-f.fa-2x.c-white.h-full.center-flex
+                                    span 2M Like
+                                    a(href="#" class="fs-13 c-white btn-shape") Like 
+                                li.box.youtube.p-15.p-relative.mb-10.between-flex
+                                    i.fa-brands.fa-youtube.fa-2x.c-white.h-full.center-flex
+                                    span 1M Subs
+                                    a(href="#" class="fs-13 c-white btn-shape") Subscribe 
+                                li.box.linkedin.p-15.p-relative.mb-10.between-flex
+                                    i.fa-brands.fa-linkedin.fa-2x.c-white.h-full.center-flex 
+                                    span 70K Followers
+                                    a(href="#" class="fs-13 c-white btn-shape") Follow 
+                        <!-- End Social Media Stats Widget -->
+                    <!-- End Wrapper -->
+                    <!-- Start Projects Table -->
+                    .projects.p-20.bg-white.m-20.rad-10 
+                        h2.mt-0.mb-20 Projects
+                        .responsive-table
+                            table.fs-15.w-full
+                                thead 
+                                    tr
+                                        th Name 
+                                        th Finish Date 
+                                        th Client 
+                                        th Price 
+                                        th Team 
+                                        th Status 
+                                tbody
+                                    tr 
+                                        td Ministry Wikipedia
+                                        td 15 May 2025
+                                        td Ministry
+                                        td $5300
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                            img(src="imgs/team-03.png" alt="Team 03 Image")
+                                            img(src="imgs/team-04.png" alt="Team 04 Image")
+                                        td 
+                                            span.label.bg-orange.c-white.btn-shape Pending
+                                    tr 
+                                        td Itsh Shop
+                                        td 10 Oct 2025
+                                        td Itsh Company
+                                        td $1500
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                            img(src="imgs/team-03.png" alt="Team 03 Image")
+                                            img(src="imgs/team-04.png" alt="Team 04 Image")
+                                        td 
+                                            span.label.bg-blue.c-white.btn-shape In Progress
+                                    tr 
+                                        td Itsh App
+                                        td 05 Sep 2025
+                                        td Itsh
+                                        td $800
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                        td 
+                                            span.label.bg-green.c-white.btn-shape Completed
+                                    tr 
+                                        td Ahmed Website
+                                        td 22 May 2025
+                                        td Ahmed
+                                        td $600
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                        td 
+                                            span.label.bg-green.c-white.btn-shape Completed
+                                    tr 
+                                        td Hesham Website
+                                        td 24 May 2025
+                                        td Hesham 
+                                        td $300
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                        td 
+                                            span.label.bg-red.c-white.btn-shape Rejected
+                                    tr 
+                                        td Itsh Application
+                                        td 01 Mar 2025
+                                        td Itsh Company
+                                        td $2600
+                                        td 
+                                            img(src="imgs/team-01.png" alt="Team 01 Image")
+                                            img(src="imgs/team-02.png" alt="Team 02 Image")
+                                            img(src="imgs/team-03.png" alt="Team 03 Image")
+                                            img(src="imgs/team-04.png" alt="Team 04 Image")
+                                        td 
+                                            span.label.bg-green.c-white.btn-shape Completed
+                    <!-- End Projects Table -->

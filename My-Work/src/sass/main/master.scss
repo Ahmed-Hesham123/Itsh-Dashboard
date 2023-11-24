@@ -1,0 +1,21 @@
+// Import Global Rules
+@use "../layout/global-rules";
+// Import Sidebar
+@use "../layout/sidebar";
+// Import Header
+@use "../layout/header";
+// Import Pages
+@use "../pages/dashboard";
+@use "../pages/settings";
+@use "../pages/profile";
+@use "../pages/projects";
+@use "../pages/courses";
+@use "../pages/friends";
+@use "../pages/files";
+@use "../pages/plans";
+// Import Colors
+@use "../variables/colors" as *;
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Functions
+@use "../helpers/functions" as *;

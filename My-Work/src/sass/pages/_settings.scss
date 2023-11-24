@@ -1,0 +1,226 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Settings
+====================*/
+
+.settings-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  .close-message {
+    border: 1px solid #ccc;
+    min-height: 150px;
+    resize: none;
+  }
+
+  .email {
+    display: inline-flex;
+    width: calc(100% - 80px);
+  }
+
+  .sec-box {
+    padding-bottom: 15px;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #eee;
+    }
+    .button {
+      transition: 0.3s;
+      &:hover {
+        background: var(--blue-alt-color);
+      }
+    }
+  }
+
+  .social-boxes {
+    i {
+      width: 40px;
+      height: 40px;
+      background: #f6f6f6;
+      border: 1px solid #ddd;
+      border-right: none;
+      border-radius: 6px 0 0 6px;
+      transition: 0.3s;
+    }
+
+    input {
+      height: 40px;
+      background: #f6f6f6;
+      border: 1px solid #ddd;
+      border-radius: 0 6px 6px 0;
+      padding-left: 10px;
+    }
+
+    & > div:focus-within {
+      &.twitter {
+        i {
+          background: #1da1f2;
+          color: #fff;
+          border-color: #1da1f2;
+        }
+        input {
+          background: rgba(29, 161, 242, 0.2);
+          color: #1da1f2;
+          border-color: #1da1f2;
+        }
+      }
+      &.facebook {
+        i {
+          background: #1877f2;
+          color: #fff;
+          border-color: #1877f2;
+        }
+        input {
+          background: rgba(24, 119, 242, 0.2);
+          color: #1877f2;
+          border-color: #1877f2;
+        }
+      }
+      &.linkedin {
+        i {
+          background: #0077b5;
+          color: #fff;
+          border-color: #0077b5;
+        }
+        input {
+          background: rgba(0, 119, 181, 0.2);
+          color: #0077b5;
+          border-color: #0077b5;
+        }
+      }
+      &.youtube {
+        i {
+          background: #ff0000;
+          color: #fff;
+          border-color: #ff0000;
+        }
+        input {
+          background: rgba(255, 0, 0, 0.2);
+          color: #ff0000;
+          border-color: #ff0000;
+        }
+      }
+    }
+  }
+  :disabled {
+    cursor: no-drop;
+    background: #f0f4f8;
+    color: #bbb;
+  }
+
+  .widgets-control {
+    .control {
+      input[type="checkbox"] {
+        appearance: none;
+      }
+      label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin-top: -9px;
+          border-radius: 4px;
+          width: 14px;
+          height: 14px;
+          border: 2px solid var(--grey-color);
+        }
+        &:hover::before {
+          border-color: var(--blue-alt-color);
+        }
+        &::after {
+          font-family: var(--fa-style-family-classic);
+          content: "\f00c";
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin-top: -9px;
+          border-radius: 4px;
+          background: var(--blue-color);
+          color: #fff;
+          font-size: 12px;
+          width: 18px;
+          height: 18px;
+          @include centering();
+          transform: scale(0);
+          transition: 0.3s;
+        }
+      }
+      input[type="checkbox"]:checked + label::after {
+        transform: scale(1) rotate(360deg);
+      }
+    }
+  }
+  .backup-control {
+    input[type="radio"] {
+      appearance: none;
+    }
+    .date {
+      label {
+        cursor: pointer;
+        position: relative;
+        padding-left: 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -11px;
+          @include circle(18px);
+          border: 2px solid var(--grey-color);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 5px;
+          margin-top: -6px;
+          @include circle(12px);
+          background: var(--blue-color);
+          transform: scale(0);
+          transition: 0.3s;
+          @include centering();
+        }
+      }
+      input[type="radio"]:checked {
+        & + label::before {
+          border-color: var(--blue-color);
+        }
+        & + label::after {
+          transform: scale(1);
+        }
+      }
+    }
+    .servers {
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      .server {
+        transition: 0.3s;
+        border: 2px solid #eee;
+        position: relative;
+        label {
+          cursor: pointer;
+        }
+      }
+      input[type="radio"]:checked {
+        & + .server {
+          color: var(--blue-color);
+          border-color: var(--blue-color);
+        }
+      }
+    }
+  }
+}
+
+/*=====================
+    End Settings
+====================*/

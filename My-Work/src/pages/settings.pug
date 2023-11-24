@@ -1,0 +1,131 @@
+- var active = "settings.html"
+doctype html
+html(lang="en")
+    head
+        include ../components/head
+        title Settings
+    body
+        .page.d-flex
+            include ../components/aside
+            .content.w-full
+                include ../components/header
+                h1.p-relative Settings
+                main
+                    .settings-page.m-20.d-grid.gap-20
+                        <!-- Start Settings Box -->
+                        .p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Site Control
+                            p.c-grey.mt-0.mb-20.fs-15 Control The Website If There Is Maintenance
+                            .mb-15.between-flex
+                                .info 
+                                    span Website Control
+                                    p.c-grey.mt-5.mb-0.fs-13 Open/Close Website And Type The Reason
+                                include ../components/checkInput
+                            textarea.close-message.p-10.rad-6.d-block.w-full(placeholder="Close Message Content")
+                        <!-- End Settings Box -->
+                        <!-- Start Settings Box -->
+                        .p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 General Info
+                            p.c-grey.mt-0.mb-20.fs-15 General Information About Your Account
+                            form
+                                .mb-15 
+                                    label.fs-14.c-grey.d-block.mb-5(for="firstName") First Name
+                                    input.b-none.border-ccc.p-10.rad-6.d-block.w-full(type="text" placeholder="First Name")#firstName
+                                .mb-15 
+                                    label.fs-14.c-grey.d-block.mb-5(for="lastName") Last Name
+                                    input.b-none.border-ccc.p-10.rad-6.d-block.w-full(type="text" placeholder="Last Name")#lastName
+                                div
+                                    label.fs-14.c-grey.d-block.mb-5(for="email") Email
+                                    input.email.b-none.border-ccc.p-10.rad-6.d-block.w-full.mr-10(type="email" placeholder="a@hm.ed" disabled)#email
+                                    a.c-blue(href="#") Change
+                        <!-- End Settings Box -->
+                        <!-- Start Settings Box -->
+                        .p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Security Info
+                            p.c-grey.mt-0.mb-20.fs-15 Security Information About Your Account
+                            .sec-box.mb-15.between-flex
+                                .info 
+                                    span Password
+                                    p.c-grey.mt-5.mb-0.fs-13 Last Change On 25/10/2021
+                                a.button.bg-blue.btn-shape.c-white(href="#") Change
+                            .sec-box.mb-15.between-flex
+                                .info 
+                                    span Two-Factor Authentication
+                                    p.c-grey.mt-5.mb-0.fs-13 Enable/Disable The Feature
+                                include ../components/checkInput
+                            .sec-box.between-flex
+                                .info 
+                                    span Devices
+                                    p.c-grey.mt-5.mb-0.fs-13 Check The Login Devices List
+                                a.bg-eee.btn-shape.rad-6.c-black(href="#") Devices
+                        <!-- End Settings Box -->
+                        <!-- Start Settings Box -->
+                        .social-boxes.p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Social Info
+                            p.c-grey.mt-0.mb-20.fs-15 Social Media Information
+                            .d-flex.align-center.mb-15.twitter 
+                                i.fa-brands.fa-twitter.center-flex.c-grey
+                                input.w-full(type="text" placeholder="Twitter Username")
+                            .d-flex.align-center.mb-15.facebook 
+                                i.fa-brands.fa-facebook-f.center-flex.c-grey
+                                input.w-full(type="text" placeholder="Facebook Username")
+                            .d-flex.align-center.mb-15.linkedin 
+                                i.fa-brands.fa-linkedin.center-flex.c-grey
+                                input.w-full(type="text" placeholder="Linkedin Username")
+                            .d-flex.align-center.mb-15.youtube
+                                i.fa-brands.fa-youtube.center-flex.c-grey
+                                input.w-full(type="text" placeholder="Youtube Username")
+                        <!-- End Settings Box -->
+                        <!-- Start Settings Box -->
+                        .widgets-control.p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Widgets Control
+                            p.c-grey.mt-0.mb-20.fs-15 Show/Hide Widgets
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox" checked)#one 
+                                label(for="one")  Quick Draft
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox" checked)#two 
+                                label(for="two")  Yearly Targets
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox" checked)#three 
+                                label(for="three")  Tickets Statistics
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox" checked)#four 
+                                label(for="four")  Latest News
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox")#five 
+                                label(for="five")  Latest Tasks
+                            .control.d-flex.align-center.mb-15 
+                                input(type="checkbox" checked)#six 
+                                label(for="six")  Top Search Items
+                        <!-- End Settings Box -->
+                        <!-- Start Settings Box -->
+                        .backup-control.p-20.bg-white.rad-10
+                            h2.mt-0.mb-10 Backup Manager
+                            p.c-grey.mt-0.mb-20.fs-15 Control Backup Time And Location
+                            .date.control.d-flex.align-center.mb-15 
+                                input(type="radio" name="time")#daily 
+                                label(for="daily")  Daily
+                            .date.control.d-flex.align-center.mb-15 
+                                input(type="radio" name="time")#weekly 
+                                label(for="weekly")  Weekly
+                            .date.control.d-flex.align-center.mb-15 
+                                input(type="radio" name="time" checked)#monthly 
+                                label(for="monthly")  Monthly
+                            .servers.d-flex.align-center.txt-c
+                                input(type="radio" name="servers")#server-one
+                                .server.mb-15.rad-10.w-full 
+                                    label.d-block.m-15(for="server-one") 
+                                        i.fa-solid.fa-server.d-block.mb-10
+                                        | Megaman
+                                input(type="radio" name="servers")#server-two
+                                .server.mb-15.rad-10.w-full 
+                                    label.d-block.m-15(for="server-two" checked) 
+                                        i.fa-solid.fa-server.d-block.mb-10
+                                        | Itsh
+                                input(type="radio" name="servers")#server-three
+                                .server.mb-15.rad-10.w-full 
+                                    label.d-block.m-15(for="server-three") 
+                                        i.fa-solid.fa-server.d-block.mb-10
+                                        | Sigma
+                        <!-- End Settings Box -->

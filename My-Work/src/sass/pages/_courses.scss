@@ -1,0 +1,47 @@
+// Import Mixins
+@use "../helpers/mixins" as *;
+// Import Animations
+@use "../layout/animations";
+
+/*=====================
+    Start Courses Page
+====================*/
+
+.courses-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .course {
+    overflow: hidden;
+    .cover {
+      width: 100%;
+      max-width: 100%;
+    }
+    .instructor {
+      position: absolute;
+      @include circle(64px);
+      border: 2px solid white;
+      top: 20px;
+      left: 20px;
+    }
+
+    .description {
+      line-height: 1.6;
+    }
+
+    .info {
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      .title {
+        height: 27px;
+        position: absolute;
+        top: -13px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/*=====================
+    End Courses Page
+====================*/
